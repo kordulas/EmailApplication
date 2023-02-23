@@ -1,0 +1,12 @@
+spring:
+  datasource:
+    url: "jdbc:h2:mem:test"
+    driver-class-name: "org.h2.Driver"
+    username: "sa"
+    password: "sa"
+  h2:
+    console:
+      enabled: true # console available on http://localhost:8080/console
+      path: /console
+  jpa:
+    show-sql: true
