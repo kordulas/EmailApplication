@@ -22,12 +22,12 @@ public class EmailController {
     //@GetMapping(path = "/getEmailById")
     @ApiOperation(value = "Get email in database by Id", notes = "provide info of email storage in database by id")
     @RequestMapping(value = "/getEmailById",params = "id",method = RequestMethod.GET)
-    public EmailAddress getEmailById(Long id){
+    public EmailAddress emailById(Long id){
         return emailService.getEmailById(id);
     }
     @ApiOperation(value = "Add new email to database", notes = "save new email in database")
     @PostMapping(path = "/addNewEmail")
-    public void addNewEmailToDatabase(@RequestBody String email){
+    public void newEmailToDatabase(@RequestBody String email){
         emailService.addNewEmailAddress(email.replaceAll("\"",""));
     }
     @ApiOperation(value = "Delete email from database", notes = "delete email from database by email address")

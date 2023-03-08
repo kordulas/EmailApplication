@@ -17,7 +17,6 @@ import java.util.Collections;
 @SpringBootApplication
 @EnableSwagger2
 public class EmailApplication {
-
 	public static void main(String[] args) {
 		SpringApplication.run(EmailApplication.class, args);
 
@@ -31,13 +30,14 @@ public class EmailApplication {
 				.build().apiInfo(createApiInfo());
 	}
 	private ApiInfo createApiInfo(){
+		final String URL_INFO = "https://jakub.kor.pl";
 		return new ApiInfo("Email sender to all emails in Database",
 				"Email tool",
 				"1.0",
-				"http://jakub.kor.pl",
-				new Contact("Jakub","http://jakub.kor.pl","kordulasinski.jakub@icloud.com"),
+				URL_INFO,
+				new Contact("Jakub",URL_INFO,"kordulasinski.jakub@icloud.com"),
 				"My own license",
-				"http://jakub.kor.pl",
+				URL_INFO,
 				Collections.emptyList()
 				);
 	}
